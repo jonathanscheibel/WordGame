@@ -36,9 +36,12 @@ Vídeo demostrativo: [https:/www.youtube.com/uiu61d2d](https:/www.youtube.com/ui
 
 ---
 
-Jonathan Scheibel – [@jonathansmorais](https://www.facebook.com/jonathan.tjq) – jonathansmorais@gmail.com
+Jonathan Scheibel - [jonathansmorais@gmail.com](mailto://jonathansmorais@gmail.com)
 
-Minha licença aqui:  para mais informações.
+Facebook: [@jonathansmorais](https://www.facebook.com/jonathan.tjq)
+
+LinkedIn: [@jonathansmorais](https://www.facebook.com/jonathan.tjq)
+
 
 [https://github.com/jonathanscheibel/WordGame.git](https://github.com/jonathanscheibel/WordGame.git)
 
