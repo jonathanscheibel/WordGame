@@ -2,7 +2,7 @@ package br.com.workgame;
 
 import java.io.FileNotFoundException;
 
-import br.com.workgame.engine.BancoDePalavras;
+import br.com.workgame.assistant.BancoDePalavras;
 import br.com.workgame.obfuscate.factory.FabricaEmbaralhadores;
 import br.com.workgame.obfuscate.interfaces.Embaralhador;
 

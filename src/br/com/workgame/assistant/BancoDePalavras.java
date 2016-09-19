@@ -1,4 +1,4 @@
-package br.com.workgame.engine;
+package br.com.workgame.assistant;
 
 import java.io.File;
 import java.io.FileNotFoundException;
