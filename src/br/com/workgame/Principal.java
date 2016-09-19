@@ -3,8 +3,8 @@ package br.com.workgame;
 import java.io.FileNotFoundException;
 
 import br.com.workgame.engine.BancoDePalavras;
-import br.com.workgame.engine.obfuscate.factory.FabricaEmbaralhadores;
-import br.com.workgame.engine.obfuscate.interfaces.Embaralhador;
+import br.com.workgame.obfuscate.factory.FabricaEmbaralhadores;
+import br.com.workgame.obfuscate.interfaces.Embaralhador;
 
 /**
  * É essa classe que é responsável por ler a entrada do usuário e por imprimir

@@ -1,4 +1,4 @@
-package br.com.workgame.engine;
+package br.com.workgame.engine.interfaces;
 
 /**
  * Interface que representa o andamento e a lógica do jogo. É responsável por

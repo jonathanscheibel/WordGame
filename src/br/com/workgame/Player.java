@@ -1,4 +1,5 @@
-package br.com.workgame.models;
+package br.com.workgame;
+
 
 public class Player {
 

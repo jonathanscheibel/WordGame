@@ -1,4 +1,4 @@
-package br.com.workgame.engine.obfuscate.interfaces;
+package br.com.workgame.obfuscate.interfaces;
 
 /**
  * Interface que representa classes reponsáveis por receber uma palavra e

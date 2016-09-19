@@ -1,10 +1,10 @@
-package br.com.workgame.engine.obfuscate.factory;
+package br.com.workgame.obfuscate.factory;
 
 import java.util.Random;
 
-import br.com.workgame.engine.obfuscate.interfaces.Embaralhador;
-import br.com.workgame.engine.obfuscate.model.EmbaralhadorAnalogico;
-import br.com.workgame.engine.obfuscate.model.EmbaralhadorDigital;
+import br.com.workgame.obfuscate.interfaces.Embaralhador;
+import br.com.workgame.obfuscate.model.EmbaralhadorAnalogico;
+import br.com.workgame.obfuscate.model.EmbaralhadorDigital;
 
 /**
  * 

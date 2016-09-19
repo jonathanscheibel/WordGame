@@ -1,6 +1,6 @@
-package br.com.workgame.engine.obfuscate.model;
+package br.com.workgame.obfuscate.model;
 
-import br.com.workgame.engine.obfuscate.interfaces.Embaralhador;
+import br.com.workgame.obfuscate.interfaces.Embaralhador;
 
 public class EmbaralhadorAnalogico implements Embaralhador {
 
