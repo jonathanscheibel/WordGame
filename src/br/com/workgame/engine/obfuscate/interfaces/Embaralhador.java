@@ -1,4 +1,4 @@
-package br.com.workgame.engine;
+package br.com.workgame.engine.obfuscate.interfaces;
 
 /**
  * Interface que representa classes reponsáveis por receber uma palavra e
@@ -9,4 +9,5 @@ package br.com.workgame.engine;
  */
 public interface Embaralhador {
 
+	public String embaralhar(String word);
 }
