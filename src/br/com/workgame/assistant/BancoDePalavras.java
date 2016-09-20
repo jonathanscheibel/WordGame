@@ -13,7 +13,7 @@ public class BancoDePalavras {
 	
 
 	//Realiza a importação das palavras possíveis para a aplicação
-	public static void importWords() {
+	private static void importWords() {
 		File file = new File(NAME_FILE_WORDS);
 		try {		
 			Scanner sc;

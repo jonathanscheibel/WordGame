@@ -1,8 +1,12 @@
 package br.com.workgame;
 
 import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 import br.com.workgame.assistant.BancoDePalavras;
+import br.com.workgame.engine.enums.TipoMecanicas;
+import br.com.workgame.engine.factory.FabricaMecanicaDoJogo;
+import br.com.workgame.engine.interfaces.MecanicaDoJogo;
 import br.com.workgame.obfuscate.factory.FabricaEmbaralhadores;
 import br.com.workgame.obfuscate.interfaces.Embaralhador;
 
@@ -12,23 +16,48 @@ import br.com.workgame.obfuscate.interfaces.Embaralhador;
  * console.
  */
 public class Principal {
-	
+
 	public static void main(String[] args) throws FileNotFoundException {
-		System.out.println(BancoDePalavras.getNewWord());
-		System.out.println(BancoDePalavras.getNewWord());			
-		
-		Embaralhador e;		
-		try {
-			e = FabricaEmbaralhadores.getRandomEmbaralhador();
-			System.out.println(e.embaralhar("Jonatah"));
-		} catch (Exception e1) {		
-			e1.printStackTrace();
-		}
-		
-		
-		
-		
+		System.out.println("Bem vindo ao WordGame!");
+		play();
 	}
 
+	private static void play() {
+		Scanner in = new Scanner(System.in);
+		try {			
+			System.out.println("Escolha um tipo de dificuldade:");
+			System.out.println("1: Fácil");
+			System.out.println("2: Médio");
+			System.out.println("3: Difícil");
 
+			MecanicaDoJogo m;
+
+			switch (in.nextInt()) {
+			case 1:
+				m = FabricaMecanicaDoJogo.getMecanicaDoJogo(TipoMecanicas.EASY);
+				break;
+			case 2:
+				m = FabricaMecanicaDoJogo.getMecanicaDoJogo(TipoMecanicas.MEDIUM);
+				break;
+			case 3:
+				m = FabricaMecanicaDoJogo.getMecanicaDoJogo(TipoMecanicas.HARD);
+				break;
+			default:				
+				throw new Exception("Tipo de dificuldade indisponível.");				
+			}
+			
+			Embaralhador embaralhador = FabricaEmbaralhadores.getRandomEmbaralhador();
+			embaralhador.embaralhar(BancoDePalavras.getNewWord());
+			
+			m.isAssert("");
+			
+			System.out.println("GoodBye");
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			play();
+		} finally {
+			in.close();
+		}
+	}
 }

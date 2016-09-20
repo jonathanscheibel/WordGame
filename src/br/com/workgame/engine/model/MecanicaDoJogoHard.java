@@ -10,7 +10,7 @@ public class MecanicaDoJogoHard implements MecanicaDoJogo {
 	}
 
 	@Override
-	public boolean isAssert() {
+	public boolean isAssert(String Word) {
 		return false;
 	}
 
