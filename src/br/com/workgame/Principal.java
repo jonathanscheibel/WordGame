@@ -16,48 +16,86 @@ import br.com.workgame.obfuscate.interfaces.Embaralhador;
  * console.
  */
 public class Principal {
-
+	private static MecanicaDoJogo mecanica;
+		
 	public static void main(String[] args) throws FileNotFoundException {
 		System.out.println("Bem vindo ao WordGame!");
 		play();
 	}
 
-	private static void play() {
-		Scanner in = new Scanner(System.in);
-		try {			
+	//Recursividade para encontrar a palavra correta ou encontrar o ponto de parada 
+	private static void assertResponse(String wordOriginal, String obfuscate){
+
+		if (!mecanica.isTryAgain()) {
+			System.out.println("Você esgotou o número máximo de tentativas!");
+			return;
+		}
+		
+		System.out.println("Que palavra é essa? " + obfuscate);
+		System.out.print("R:");
+		Scanner enter = new Scanner(System.in);
+		try {
+			String trying = enter.next();
+			
+			System.out.println("Antes tentativa: " + mecanica.getNumeroTentativaAtual());
+
+			
+			if (mecanica.isAssert(wordOriginal, trying)) {
+				System.out.println("Acertou!");
+			} else {				
+				System.out.println("Depois tentativa: " + mecanica.getNumeroTentativaAtual());
+				System.out.println("Você não acertou e ainda possui " + Integer.toString(mecanica.tryingPossible()) + " tentativas.");
+				assertResponse(wordOriginal, obfuscate);
+			}			
+			
+		} finally {
+			enter.close();
+		}
+	}
+	
+	private static void play() {		
+		Scanner enter = new Scanner(System.in);
+		try {
+			
 			System.out.println("Escolha um tipo de dificuldade:");
 			System.out.println("1: Fácil");
 			System.out.println("2: Médio");
-			System.out.println("3: Difícil");
+			System.out.println("3: Difícil");			
 
-			MecanicaDoJogo m;
-
-			switch (in.nextInt()) {
-			case 1:
-				m = FabricaMecanicaDoJogo.getMecanicaDoJogo(TipoMecanicas.EASY);
-				break;
-			case 2:
-				m = FabricaMecanicaDoJogo.getMecanicaDoJogo(TipoMecanicas.MEDIUM);
-				break;
-			case 3:
-				m = FabricaMecanicaDoJogo.getMecanicaDoJogo(TipoMecanicas.HARD);
-				break;
-			default:				
-				throw new Exception("Tipo de dificuldade indisponível.");				
+			try {				
+				switch (enter.nextInt()) {
+				case 1:
+					mecanica = FabricaMecanicaDoJogo.getMecanicaDoJogo(TipoMecanicas.EASY);
+					break;
+				case 2:
+					mecanica = FabricaMecanicaDoJogo.getMecanicaDoJogo(TipoMecanicas.MEDIUM);
+					break;
+				case 3:
+					mecanica = FabricaMecanicaDoJogo.getMecanicaDoJogo(TipoMecanicas.HARD);
+					break;
+				default:				
+					throw new Exception("Tipo de dificuldade indisponível.");				
+				}
+				
+				Embaralhador embaralhador = FabricaEmbaralhadores.getRandomEmbaralhador();
+				
+				String wordOriginal = BancoDePalavras.getNewWord();
+				String wordObfuscate = embaralhador.embaralhar(wordOriginal);
+			
+				assertResponse(wordOriginal, wordObfuscate);
+				
+			} finally {
+				mecanica = null;
 			}
-			
-			Embaralhador embaralhador = FabricaEmbaralhadores.getRandomEmbaralhador();
-			embaralhador.embaralhar(BancoDePalavras.getNewWord());
-			
-			m.isAssert("");
-			
 			System.out.println("GoodBye");
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 			play();
 		} finally {
-			in.close();
+			enter.close();
 		}
+		
+		
 	}
 }
