@@ -5,7 +5,13 @@
 	<artifactId>WordGame</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
+	
+	<properties>
+		<failOnMissingWebXml>false</failOnMissingWebXml>
+	</properties>
+	
 	<build>
+
 		<sourceDirectory>src</sourceDirectory>
 		<resources>
 			<resource>

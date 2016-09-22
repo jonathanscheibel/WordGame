@@ -45,4 +45,16 @@ public class MecanicaDoJogoMedium implements MecanicaDoJogo{
 	public Integer getNumeroTentativaAtual() {
 		return TRY_AGAIN_POSSIBLE - numeroTentativaAtual;
 	}
+
+	@Override
+	public boolean isGamefinished() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Integer getCurrentScore() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

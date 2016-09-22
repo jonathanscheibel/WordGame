@@ -18,5 +18,7 @@ public interface MecanicaDoJogo {
 	public double getFinalScore();
 	public int tryingPossible();
 	public Integer getNumeroTentativaAtual();
+	public boolean isGamefinished();
+	public Integer getCurrentScore();  
 	
 }

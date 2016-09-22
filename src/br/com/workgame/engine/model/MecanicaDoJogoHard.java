@@ -46,4 +46,16 @@ public class MecanicaDoJogoHard implements MecanicaDoJogo {
 		return TRY_AGAIN_POSSIBLE - numeroTentativaAtual;
 	}
 
+	@Override
+	public boolean isGamefinished() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Integer getCurrentScore() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

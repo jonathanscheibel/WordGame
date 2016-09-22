@@ -1,6 +1,8 @@
 package br.com.workgame;
 
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 import br.com.workgame.assistant.BancoDePalavras;
@@ -17,53 +19,58 @@ import br.com.workgame.obfuscate.interfaces.Embaralhador;
  */
 public class Principal {
 	private static MecanicaDoJogo mecanica;
-		
-	public static void main(String[] args) throws FileNotFoundException {
+	private static Scanner enter;
+	
+	public static void main(String[] args) throws FileNotFoundException {		
 		System.out.println("Bem vindo ao WordGame!");
-		play();
-	}
-
-	//Recursividade para encontrar a palavra correta ou encontrar o ponto de parada 
-	private static void assertResponse(String wordOriginal, String obfuscate){
-
-		if (!mecanica.isTryAgain()) {
-			System.out.println("Você esgotou o número máximo de tentativas!");
-			return;
-		}
-		
-		System.out.println("Que palavra é essa? " + obfuscate);
-		System.out.print("R:");
-		Scanner enter = new Scanner(System.in);
+		enter = new Scanner(System.in);
 		try {
-			String trying = enter.next();
-			
-			System.out.println("Antes tentativa: " + mecanica.getNumeroTentativaAtual());
-
-			
-			if (mecanica.isAssert(wordOriginal, trying)) {
-				System.out.println("Acertou!");
-			} else {				
-				System.out.println("Depois tentativa: " + mecanica.getNumeroTentativaAtual());
-				System.out.println("Você não acertou e ainda possui " + Integer.toString(mecanica.tryingPossible()) + " tentativas.");
-				assertResponse(wordOriginal, obfuscate);
-			}			
-			
+			play();
 		} finally {
 			enter.close();
-		}
+		}		
+		System.out.println("GoodBye");
 	}
-	
-	private static void play() {		
-		Scanner enter = new Scanner(System.in);
+
+	// Método recursivo para encontrar a palavra correta ou até encontrar o
+	// ponto de parada
+	private static boolean assertResponse(String wordOriginal, String obfuscate) {
+		if (!mecanica.isTryAgain()) {
+			System.out.println("Você esgotou o número máximo de tentativas! GAME OVER");
+			return false;
+		}
+		
+		System.out.println("Que palavra é essa?? " + obfuscate);
+		System.out.print("R:");		
 		try {
-			
+			String trying = enter.next();
+			if (mecanica.isAssert(wordOriginal, trying)) {				
+				if (mecanica.isGamefinished()) {
+					System.out.println("Parabéns, você zerou/concluiu o jogo!");
+				}
+				return true;
+			} else {
+				System.out.println("Você não acertou e ainda possui " + Integer.toString(mecanica.tryingPossible()) + " tentativas.");
+				return assertResponse(wordOriginal, obfuscate);
+			}
+		} catch(Exception e) {
+			return false;
+		}		
+	}
+
+	private static void play() {
+		BufferedReader enter = new BufferedReader(new InputStreamReader(System.in));
+		try {
 			System.out.println("Escolha um tipo de dificuldade:");
 			System.out.println("1: Fácil");
 			System.out.println("2: Médio");
-			System.out.println("3: Difícil");			
+			System.out.println("3: Difícil");
+			System.out.print("R:");
 
-			try {				
-				switch (enter.nextInt()) {
+			int difficulty = Integer.parseInt(enter.readLine());
+			System.out.println(difficulty);
+			try {
+				switch (difficulty) {
 				case 1:
 					mecanica = FabricaMecanicaDoJogo.getMecanicaDoJogo(TipoMecanicas.EASY);
 					break;
@@ -73,29 +80,29 @@ public class Principal {
 				case 3:
 					mecanica = FabricaMecanicaDoJogo.getMecanicaDoJogo(TipoMecanicas.HARD);
 					break;
-				default:				
-					throw new Exception("Tipo de dificuldade indisponível.");				
+				default:
+					throw new Exception("Tipo de dificuldade indisponível.");
 				}
-				
+
 				Embaralhador embaralhador = FabricaEmbaralhadores.getRandomEmbaralhador();
-				
 				String wordOriginal = BancoDePalavras.getNewWord();
 				String wordObfuscate = embaralhador.embaralhar(wordOriginal);
-			
-				assertResponse(wordOriginal, wordObfuscate);
+				boolean testAssert = assertResponse(wordOriginal, wordObfuscate);
+				
+				if (!testAssert) {
+					System.out.println("Deseja continuar jogando? [S/N]");				
+					String digitReplay = enter.readLine();
+					if (digitReplay.equalsIgnoreCase("S")) {
+						play();
+					}
+				}
 				
 			} finally {
 				mecanica = null;
 			}
-			System.out.println("GoodBye");
-			
+
 		} catch (Exception e) {
-			e.printStackTrace();
-			play();
-		} finally {
-			enter.close();
+			e.printStackTrace();			
 		}
-		
-		
 	}
 }
