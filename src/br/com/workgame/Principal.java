@@ -1,8 +1,6 @@
 package br.com.workgame;
 
-import java.io.BufferedReader;
 import java.io.FileNotFoundException;
-import java.io.InputStreamReader;
 import java.util.Scanner;
 
 import br.com.workgame.assistant.BancoDePalavras;
@@ -60,15 +58,15 @@ public class Principal {
 		String wordObfuscate = embaralhador.embaralhar(wordOriginal);
 
 		if (assertResponse(wordOriginal, wordObfuscate)) {
+			continuos();
+		} else {
 			System.out.println("Deseja continuar jogando? [S/N]");
-			String digitReplay = enter.nextLine();
+			String digitReplay = enter.next();
 			if (digitReplay.equalsIgnoreCase("S")) {
 				play();
 			} else {
 				return;
 			}
-		} else {
-			continuos();
 		}
 	}
 
@@ -82,7 +80,7 @@ public class Principal {
 			System.out.println("?: Sair");
 			System.out.print("R:");
 
-			int difficulty = Integer.parseInt(enter.nextLine());
+			int difficulty = Integer.parseInt(enter.next());
 			System.out.println(difficulty);
 			try {
 				switch (difficulty) {
