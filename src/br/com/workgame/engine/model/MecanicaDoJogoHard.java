@@ -6,10 +6,12 @@ public class MecanicaDoJogoHard implements MecanicaDoJogo {
 
 	private static final int TRY_AGAIN_POSSIBLE = 1;
 	private int numeroTentativaAtual;
+	public Integer pontuacaoAtual;
 	
 	public MecanicaDoJogoHard(){
 		super();
 		this.numeroTentativaAtual = 0;
+		setCurrentScore(0);
 	}
 	
 	@Override
@@ -20,9 +22,11 @@ public class MecanicaDoJogoHard implements MecanicaDoJogo {
 	@Override
 	public boolean isAssert(String expected, String Word) {
 		if (expected.equals(Word)) {
-			return true;
+			System.out.println("Acertou_Hard");
+			return true;			
 		} else {
 			numeroTentativaAtual++;
+			System.out.println("Errou_Hard");
 			return false;
 		}
 	}
@@ -58,4 +62,7 @@ public class MecanicaDoJogoHard implements MecanicaDoJogo {
 		return null;
 	}
 
+	private void setCurrentScore(Integer ponint){
+		pontuacaoAtual = ponint; 
+	}
 }

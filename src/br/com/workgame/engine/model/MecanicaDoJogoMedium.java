@@ -6,10 +6,12 @@ public class MecanicaDoJogoMedium implements MecanicaDoJogo{
 
 	private static final int TRY_AGAIN_POSSIBLE = 2;
 	private int numeroTentativaAtual;
+	public Integer pontuacaoAtual;
 	
 	public MecanicaDoJogoMedium(){
 		super();
 		this.numeroTentativaAtual = 0;
+		setCurrentScore(0);
 	}
 	
 	@Override
@@ -20,9 +22,11 @@ public class MecanicaDoJogoMedium implements MecanicaDoJogo{
 	@Override
 	public boolean isAssert(String expected, String Word) {
 		if (expected.equalsIgnoreCase(Word)) {
+			System.out.println("Acertou_Medium");
 			return true;
 		} else {
 			numeroTentativaAtual++;
+			System.out.println("Errou_Medium");
 			return false;
 		}
 	}
@@ -56,5 +60,9 @@ public class MecanicaDoJogoMedium implements MecanicaDoJogo{
 	public Integer getCurrentScore() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	private void setCurrentScore(Integer ponint){
+		pontuacaoAtual = ponint; 
 	}
 }

@@ -14,6 +14,7 @@ public class MecanicaDoJogoEasy implements MecanicaDoJogo {
 	public MecanicaDoJogoEasy(){
 		super();
 		this.numeroTentativaAtual = 0;
+		setCurrentScore(0);
 	}
 	
 	public Integer getNumeroTentativaAtual() {
@@ -27,9 +28,8 @@ public class MecanicaDoJogoEasy implements MecanicaDoJogo {
 
 	@Override
 	public boolean isAssert(String expected, String Word) {
-		System.out.println("Verificando a palavra");
-		if (expected.equalsIgnoreCase(Word)) {
-			setCurrentScore(getCurrentScore()+RATING);
+		if (expected.equalsIgnoreCase(Word)) {			
+			setCurrentScore(getCurrentScore()+RATING);			
 			return true;
 		} else {
 			numeroTentativaAtual++;
@@ -62,8 +62,8 @@ public class MecanicaDoJogoEasy implements MecanicaDoJogo {
 		return pontuacaoAtual;
 	}
 	
-	private Integer setCurrentScore(Integer ponint){
-		return pontuacaoAtual; 
+	private void setCurrentScore(Integer ponint){
+		pontuacaoAtual = ponint; 
 	}
 
 }
