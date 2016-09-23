@@ -32,17 +32,12 @@ O importante é que independente do funcionamento, a classe Principal deverá in
 
 ---
 
-Vídeo demostrativo: [https:/www.youtube.com/uiu61d2d](https:/www.youtube.com/uiu61d2d)
+Vídeo demostrativo: [https:/www.youtube.com/uiu61d2d](https:/www.youtube.com/uiu61d2d) - [https://github.com/jonathanscheibel/WordGame.git](https://github.com/jonathanscheibel/WordGame.git)
 
 ---
 
 
-Jonathan Scheibel - [jonathansmorais@gmail.com](mailto://jonathansmorais@gmail.com)
-
-Facebook: [@jonathansmorais](https://www.facebook.com/jonathan.tjq)
-
-LinkedIn: [@jonathansmorais](https://www.facebook.com/jonathan.tjq)
+Jonathan Scheibel - [jonathansmorais@gmail.com](mailto://jonathansmorais@gmail.com) - [Facebook](https://www.facebook.com/jonathan.tjq) - [LinkedIn](https://br.linkedin.com/in/jonathan-morais-bb458b6b)
 
 
-[https://github.com/jonathanscheibel/WordGame.git](https://github.com/jonathanscheibel/WordGame.git)
 
