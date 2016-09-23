@@ -2,31 +2,31 @@
 > Conclusão do módulo Orientação a Objetos com Java (Programas de Cursos Integrados - ITA)
 
 
-A classe Principal deve recuperar a instância de MecanicaDoJogo de
-FabricaMecanicaDoJogo e não pode conter nenhuma referência direta a uma das
-implementações, apenas a interface. Da mesma forma, as implementações de
-MecanicaDoJogo devem recuperar os embaralhadores de FabricaEmbaralhadores e
-também não pode conter nenhuma referência direta a implementações de
-Embaralhador, apenas a interface.
+Ao entra no jogo você poderá escolher o nível de dificuldade.
+	
+	1 - Fácil   - (Vale 1 ponto(s) cada acerto)
+	
+	2 - Médio   - (Vale 2 ponto(s) cada acerto)
+	
+	3 - Difícil - (Vale 3 ponto(s) cada acerto)
 
-As implementações de embaralhador devem conter algoritmos para o
-embaralhamento de palavras. 
+1 - Nível em que a pessoa tem 3 chances de acerto em todo o jogo, cada acerto soma-se um ponto em sua pontuação geral e para atingir o limite de acertos é necessário acertar 10 vezes;
 
-	Exemplo: inverter string, permutar randomicamente, trocar letras impares por pares e etc...
+2 - Nesti nível intermediário, o jogador poderá errar 2 vezes durante todo o jogo, cada acerto soma-se 2 em sua pontuação geral, e é necessário acertar 15 vezes para concluir o game;
 
-As implementações de MecanicaDoJogo devem retratar o andamento do jogo.
+3 - O nível mais difícil do jogo, o jogador não pode errar nenhuma vez, cada resposta correta pontua-se mais 3 pontos em sua contagem final, e para concluir é necessário acertar todas as 20 palavras;
 
-Exemplos de questões que podem mudar: Quando o jogo termina (após um número
-fixo de palavras, após um número de erros); quantas tentativas podem ser
-feitas por palavra; como são computados os pontos; qual embaralhador será
-utilizado e em que momento; e etc... 
 
-O importante é que independente do funcionamento, a classe Principal deverá interagir com ele da mesma forma
+
+	Existem várias formas de embaralhamento, e para cada palavra o jogo embaralha de aleatória
+
+Ao ganhar ou perder o jogo ele perguntará se o jogador deseja continuar jogando ou sair do jogo.
+
 
 ![](http://ceeita.com.br/wp-content/uploads/2016/03/ita-logo-700x298.png) 
 [https://www.coursera.org/learn/arquitetura-de-software-projetos-ageis](https://www.coursera.org/learn/arquitetura-de-software-projetos-ageis)
 
-##Deverá ser entregue: 
+##Este documento contém: 
 *	O código criado para o jogo 
 *	O diagrama de classes com ``todas as classes criadas`` 
 *	Testes de unidade para as classes de embaralhamento 
