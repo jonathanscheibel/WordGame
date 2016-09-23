@@ -12,10 +12,8 @@ package br.com.workgame.engine.interfaces;
  */
 public interface MecanicaDoJogo {
 
-	public boolean isTerminate();
 	public boolean isAssert(String expected, String Word);
 	public boolean isTryAgain();
-	public double getFinalScore();
 	public int tryingPossible();
 	public Integer getNumeroTentativaAtual();
 	public boolean isGamefinished();

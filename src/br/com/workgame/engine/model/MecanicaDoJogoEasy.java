@@ -4,9 +4,9 @@ import br.com.workgame.engine.interfaces.MecanicaDoJogo;
 
 public class MecanicaDoJogoEasy implements MecanicaDoJogo {
 
-	private static final int TRY_AGAIN_POSSIBLE = 3; //Tentativas possíveis
-	private static final int RATING 			= 1; //Peso
-	private static final int MAXIMUM_RESET 		= 3; //Acertos para zerar o jogo 
+	private static final int TRY_AGAIN_POSSIBLE = 3; 	//Tentativas possíveis
+	private static final int RATING 			= 1; 	//Peso
+	private static final int MAXIMUM_RESET 		= 10; 	//Acertos para zerar o jogo 
 	
 	public Integer numeroTentativaAtual;
 	public Integer pontuacaoAtual;
@@ -19,11 +19,6 @@ public class MecanicaDoJogoEasy implements MecanicaDoJogo {
 	
 	public Integer getNumeroTentativaAtual() {
 		return numeroTentativaAtual;
-	}
-	
-	@Override
-	public boolean isTerminate() {
-		return false;
 	}
 
 	@Override
@@ -41,11 +36,6 @@ public class MecanicaDoJogoEasy implements MecanicaDoJogo {
 	public boolean isTryAgain() {
 		return numeroTentativaAtual < TRY_AGAIN_POSSIBLE;
 	}
-
-	@Override
-	public double getFinalScore() {
-		return 0;
-	}
 	
 	public int tryingPossible(){
 		return TRY_AGAIN_POSSIBLE - numeroTentativaAtual; 
@@ -53,7 +43,6 @@ public class MecanicaDoJogoEasy implements MecanicaDoJogo {
 
 	@Override
 	public boolean isGamefinished() {
-		System.out.println("->" + getCurrentScore());
 		return getCurrentScore() >= MAXIMUM_RESET;
 	}
 

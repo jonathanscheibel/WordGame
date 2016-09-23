@@ -30,11 +30,10 @@ public class Principal {
 		System.out.println("GoodBye");
 	}
 
-	// Método recursivo para encontrar a palavra correta ou até encontrar o
-	// ponto de parada
+	// Método recursivo para encontrar a palavra correta ou até encontrar o ponto de parada
 	private static boolean assertResponse(String wordOriginal, String obfuscate) throws Exception {
 		if (!mecanica.isTryAgain()) {
-			System.out.println("Você esgotou o número máximo de tentativas! GAME OVER");
+			System.out.println("GAME OVER");
 			return false;
 		}
 
@@ -43,40 +42,44 @@ public class Principal {
 		String trying = enter.next();
 
 		if (mecanica.isAssert(wordOriginal, trying)) {
+			System.out.println("Você acertou! Sua pontuação atual é de: " + mecanica.getCurrentScore());
 			return true;
 		} else {
-			System.out.println(
-					"Você não acertou e ainda possui " + Integer.toString(mecanica.tryingPossible()) + " tentativas.");
+			System.out.println("Você não acertou e ainda possui " + Integer.toString(mecanica.tryingPossible()) + " tentativas.");
 			return assertResponse(wordOriginal, obfuscate);
 		}
 	}
 
 	private static void continuos() throws Exception {
-						
+
 		Embaralhador embaralhador = FabricaEmbaralhadores.getRandomEmbaralhador();
 		String wordOriginal = BancoDePalavras.getNewWord();
 		String wordObfuscate = embaralhador.embaralhar(wordOriginal);
 
 		if (assertResponse(wordOriginal, wordObfuscate)) {
-			continuos();
+			if (mecanica.isGamefinished()) 
+				System.out.println("Você zerou/concluiu o jogo!");
+			else
+				continuos();
+			
 		} else {
+			System.out.println(" ");
 			System.out.println("Deseja continuar jogando? [S/N]");
 			String digitReplay = enter.next();
-			if (digitReplay.equalsIgnoreCase("S")) {
+			if (digitReplay.equalsIgnoreCase("S"))
 				play();
-			} else {
+			else
 				return;
-			}
 		}
 	}
 
-	private static void play() {		
-		
+	private static void play() {
+
 		try {
 			System.out.println("Escolha um tipo de dificuldade:");
-			System.out.println("1: Fácil");
-			System.out.println("2: Médio");
-			System.out.println("3: Difícil");
+			System.out.println("1: Fácil 	(Valendo 1 ponto)");
+			System.out.println("2: Médio 	(Valendo 2 ponto)");
+			System.out.println("3: Difícil	(Valendo 3 ponto)");
 			System.out.println("?: Sair");
 			System.out.print("R:");
 
@@ -96,15 +99,15 @@ public class Principal {
 				default:
 					return;
 				}
-				
+
 				continuos();
-				
+
 			} finally {
 				mecanica = null;
 			}
 
 		} catch (Exception e) {
-			
+
 		}
 	}
 }
