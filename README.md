@@ -1,8 +1,13 @@
-# WordGame
+# WordGame vs. 1.0.0
 > Conclusão do módulo Orientação a Objetos com Java (Programas de Cursos Integrados - ITA)
 
+Este software é o trabalho final exigido pelo Módulo de Orientação a Objetos com java do Programa de Cursos Integrados do Instituto tecnológico da Aeronáutica. 
 
-Ao entra no jogo você poderá escolher o nível de dificuldade.
+O propósito deste projeto é a implementação de um jogo de palavras.
+
+-------------
+
+Ao entrar no jogo você poderá escolher o nível de dificuldade.
 	
 	1 - Fácil   - (Vale 1 ponto(s) cada acerto)
 	
@@ -34,7 +39,7 @@ Ao ganhar ou perder o jogo ele perguntará se o jogador deseja continuar jogando
 
 ---
 
-Vídeo demostrativo: [https:/www.youtube.com/uiu61d2d](https:/www.youtube.com/uiu61d2d) - [https://github.com/jonathanscheibel/WordGame.git](https://github.com/jonathanscheibel/WordGame.git)
+Vídeo demostrativo: [https://youtu.be/VYrTqdL5OII](https://youtu.be/VYrTqdL5OII) - [https://github.com/jonathanscheibel/WordGame.git](https://github.com/jonathanscheibel/WordGame.git)
 
 ---
 
