@@ -39,7 +39,7 @@ Ao ganhar ou perder o jogo ele perguntará se o jogador deseja continuar jogando
 
 ---
 
-Vídeo demostrativo: [https://youtu.be/VYrTqdL5OII](https://youtu.be/VYrTqdL5OII) - [https://github.com/jonathanscheibel/WordGame.git](https://github.com/jonathanscheibel/WordGame.git)
+[https://youtu.be/VYrTqdL5OII](https://youtu.be/VYrTqdL5OII) - [https://github.com/jonathanscheibel/WordGame.git](https://github.com/jonathanscheibel/WordGame.git)
 
 ---
 
