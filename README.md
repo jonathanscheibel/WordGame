@@ -24,6 +24,7 @@ utilizado e em que momento; e etc...
 O importante é que independente do funcionamento, a classe Principal deverá interagir com ele da mesma forma
 
 ![](http://ceeita.com.br/wp-content/uploads/2016/03/ita-logo-700x298.png) 
+
 [https://www.coursera.org/learn/arquitetura-de-software-projetos-ageis](https://www.coursera.org/learn/arquitetura-de-software-projetos-ageis)
 
 ##Deverá ser entregue: 
