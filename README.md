@@ -1,7 +1,5 @@
 # WordGame
-> Jogo integrado de adivinhação.
-
-![](header.png) mudar essa imagem
+> Conclusão do módulo Orientação a Objetos com Java (Programas de Cursos Integrados - ITA)
 
 A classe Principal deve recuperar a instância de MecanicaDoJogo de
 FabricaMecanicaDoJogo e não pode conter nenhuma referência direta a uma das
@@ -24,6 +22,8 @@ utilizado e em que momento; e etc...
 
 O importante é que independente do funcionamento, a classe Principal deverá interagir com ele da mesma forma
 
+![](http://ceeita.com.br/wp-content/uploads/2016/03/ita-logo-700x298.png) 
+
 ##Deverá ser entregue: 
 *	O código criado para o jogo 
 *	O diagrama de classes com ``todas as classes criadas`` 
@@ -35,6 +35,7 @@ O importante é que independente do funcionamento, a classe Principal deverá in
 Vídeo demostrativo: [https:/www.youtube.com/uiu61d2d](https:/www.youtube.com/uiu61d2d)
 
 ---
+
 
 Jonathan Scheibel - [jonathansmorais@gmail.com](mailto://jonathansmorais@gmail.com)
 
