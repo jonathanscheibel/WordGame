@@ -29,6 +29,7 @@ Ao ganhar ou perder o jogo ele perguntará se o jogador deseja continuar jogando
 
 
 ![](http://ceeita.com.br/wp-content/uploads/2016/03/ita-logo-700x298.png) 
+
 [https://www.coursera.org/learn/arquitetura-de-software-projetos-ageis](https://www.coursera.org/learn/arquitetura-de-software-projetos-ageis)
 
 ##Este documento contém: 
