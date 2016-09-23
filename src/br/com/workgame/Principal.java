@@ -33,7 +33,7 @@ public class Principal {
 	// Método recursivo para encontrar a palavra correta ou até encontrar o ponto de parada
 	private static boolean assertResponse(String wordOriginal, String obfuscate) throws Exception {
 		if (!mecanica.isTryAgain()) {
-			System.out.println("GAME OVER");
+			System.out.println("GAME OVER! - Pontuação final: " + mecanica.getCurrentScore());
 			return false;
 		}
 

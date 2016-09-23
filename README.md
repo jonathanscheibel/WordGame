@@ -1,6 +1,7 @@
 # WordGame
 > Conclusão do módulo Orientação a Objetos com Java (Programas de Cursos Integrados - ITA)
 
+
 A classe Principal deve recuperar a instância de MecanicaDoJogo de
 FabricaMecanicaDoJogo e não pode conter nenhuma referência direta a uma das
 implementações, apenas a interface. Da mesma forma, as implementações de
@@ -23,6 +24,7 @@ utilizado e em que momento; e etc...
 O importante é que independente do funcionamento, a classe Principal deverá interagir com ele da mesma forma
 
 ![](http://ceeita.com.br/wp-content/uploads/2016/03/ita-logo-700x298.png) 
+[https://www.coursera.org/learn/arquitetura-de-software-projetos-ageis](https://www.coursera.org/learn/arquitetura-de-software-projetos-ageis)
 
 ##Deverá ser entregue: 
 *	O código criado para o jogo 
