@@ -28,7 +28,7 @@ Ao entrar no jogo você poderá escolher o nível de dificuldade.
 Ao ganhar ou perder o jogo ele perguntará se o jogador deseja continuar jogando ou sair do jogo.
 
 
-![](http://ceeita.com.br/wp-content/uploads/2016/03/ita-logo-700x298.png) 
+![](http://aeita.com.br/wiki/images/thumb/7/78/Brasao_ITA_cmyk.gif/800px-Brasao_ITA_cmyk.gif) 
 
 [https://www.coursera.org/learn/arquitetura-de-software-projetos-ageis](https://www.coursera.org/learn/arquitetura-de-software-projetos-ageis)
 
