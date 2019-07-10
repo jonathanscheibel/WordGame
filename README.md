@@ -1,4 +1,7 @@
 # WordGame vs. 1.0.0
+
+![](http://aeita.com.br/wiki/images/thumb/7/78/Brasao_ITA_cmyk.gif/800px-Brasao_ITA_cmyk.gif) 
+
 > Conclusão do módulo Orientação a Objetos com Java (Programas de Cursos Integrados - ITA)
 
 Este software é o trabalho final exigido pelo Módulo de Orientação a Objetos com java do Programa de Cursos Integrados do Instituto tecnológico da Aeronáutica. 
@@ -26,9 +29,6 @@ Ao entrar no jogo você poderá escolher o nível de dificuldade.
 	Existem várias formas de embaralhamento, e para cada palavra o jogo embaralha de aleatória
 
 Ao ganhar ou perder o jogo ele perguntará se o jogador deseja continuar jogando ou sair do jogo.
-
-
-![](http://aeita.com.br/wiki/images/thumb/7/78/Brasao_ITA_cmyk.gif/800px-Brasao_ITA_cmyk.gif) 
 
 [https://www.coursera.org/learn/arquitetura-de-software-projetos-ageis](https://www.coursera.org/learn/arquitetura-de-software-projetos-ageis)
 
